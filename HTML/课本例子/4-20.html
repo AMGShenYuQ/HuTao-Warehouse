@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript DOM查找元素的简单应用</title>
+    <style>
+        p{
+            width: 130px;
+            height: 50px;
+            border: 1px solid;
+        }
+        .coral{
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <h3>JavaScript DOM查找元素的简单应用</h3>
+    <hr />
+    <p id="p01">这是第一个给段落</p>
+    <p id="o02" class="coral">这是第二个段落</p>
+    <p id="p03">这是第三个段落</p>
+    <script>
+        var p01=document.getElementById("p01");
+        var p=document.getElementsByTagName("p");
+        var p02=document.getElementsByClassName("coral");
+        alert("id名称为p01的段落内容是:\n"+p01.innerHTML
+        +"\n\n第3个段落的内容是:\n"+p[2].innerHTML
+        +"\n\n类名称为coral的段落内容是:\n"+p02[0].innerHTML);
+    </script>
+</body>
+</html>
