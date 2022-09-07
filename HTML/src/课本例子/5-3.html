@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML5拖放API之设置可拖放元素</title>
+        <style>
+            p{
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>HTML5拖放API之设置可拖放元素</h3>
+        <hr />
+        <p draggable="true" ondragstart="drag(event)">这是一个可拖放的段落元素.</p>
+        <script>
+            function drag(ev){
+                var img = new Image();
+                img.src = "image/B站logo.jpg";
+                ev.dataTransfer.setDragImage(img, 5, 5);
+            }
+        </script>
+    </body>
+</html>
