@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>标记标签label的简单应用</title>
+        <style>
+            form{
+                border: 1px solid;
+                text-align: center;
+                width: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>标记标签label的简单应用</h3>
+        <hr />
+        <form method="post" action="URL" name="form1">
+            <label for="name1">用户名：</label>
+            <input type="text" name="name1" id="name1" />
+            <br />
+            <label for="pwd1">密　码：</label>
+            <input type="password" name="pwd1" id="pwd1" />
+            <br />
+            <input type="submit" value="登录" />
+        </form>
+        <br />
+
+        <form method="post" action="URL" name="form2">
+            <label>用户名：
+                <input type="text" name="name2" />
+            </label>
+            <br />
+            <label>密　码：
+                <input type="password" name="pwd2" />
+            </label>
+            <br />
+            <input type="submit" value="登录" />
+        </form>
+    </body>
+</html>
