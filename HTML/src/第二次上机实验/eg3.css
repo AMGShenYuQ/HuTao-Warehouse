@@ -1,0 +1,25 @@
+h1{color: blue;}
+h3{color: blue;font-family: "宋体";}
+.style1{
+    font-style: italic;
+    font-size: 25px;
+    color: blue;
+}
+.style2{
+    background-color: rgb(153, 153, 204);
+    font-family: "宋体";
+    color: blue;
+    font-size: 8px;
+}
+.style3{
+    color: red;
+    font-family: "宋体";
+    font-size: 15px;
+}
+.style4{
+    background-color: rgb(192,192,192);
+    font-family: "楷体";
+    color: rgb(0,0,204);
+    font-weight: bold;
+    font-size: 8px;
+}
