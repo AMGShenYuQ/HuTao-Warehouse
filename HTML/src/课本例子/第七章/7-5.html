@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>在画布上绘制圆弧</title>
+    </head>
+    <body>
+        <h3>在画布上绘制圆弧</h3>
+        <hr />
+        <canvas id="myCanvas" width="300" height="200" style="border: 1px solid">
+          ……………………
+        </canvas>
+        <script>
+          var c = document.getElementById("myCanvas");
+          var ctx = c.getContext("2d");
+          ctx.fillStyle = "yellow";
+          ctx.beginPath();
+          ctx.arc(150,100,80,0,Math.PI*2,true);
+          ctx.stroke();
+          ctx.fill();
+
+          ctx.fillStyle = "black";
+          ctx.beginPath();
+          ctx.arc(110,80,10,0,Math.PI*2,true);
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.arc(190,80,10,0,Math.PI*2,true);
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.arc(150,110,50,0,Math.PI,false);
+          ctx.stroke();
+        </script>
+    </body>
+</html>

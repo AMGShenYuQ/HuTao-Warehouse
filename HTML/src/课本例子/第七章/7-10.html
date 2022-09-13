@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>在画布上清空矩形区域</title>
+    </head>
+    <body>
+        <h3>在画布上清空矩形区域</h3>
+        <hr />
+        <canvas id="myCanvas" width="300" height="200" style="border: 1px solid">
+            ………………
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "orange";
+            ctx.fillRect(50,50,200,100);
+            ctx.clearRect(100,75,100,50);
+        </script>
+    </body>
+</html>

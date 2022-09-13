@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS绝对定位的应用</title>
+        <style>
+            p{
+                position:absolute;
+                width: 120px;
+                height: 120px;
+                top: 100px;
+                left: 0px;
+                background-color: #C8EDFF;
+            }
+            div{
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                top:80px;
+                left: 180px;
+                border: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>CSS绝对定位的应用</h3>
+        <hr />
+        <p>
+            该段落是相对于页面定位的，距离页面的顶端100像素，距离左边0像素
+        </p>
+        <div>
+            我是相对于页面定位的div元素，距离顶端80像素，距离左边180像素
+            <p>
+                该段落是相对于父元素div定位的，距离div元素的顶端100像素，距离div元素的左边0像素
+            </p>
+        </div>
+    </body>
+</html>

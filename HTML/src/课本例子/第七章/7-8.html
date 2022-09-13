@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>在画布上绘制空心矩形</title>
+        <style>
+            canvas{
+                border: 1px solid;
+                background-color: silver;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>在画布上绘制空心矩形</h3>
+        <hr />
+        <canvas id="myCanvas" width="300" height="200">
+            ………………
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.strokeRect(50,50,200,100);
+        </script>
+    </body>
+</html>

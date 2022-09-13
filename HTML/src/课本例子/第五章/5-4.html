@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML5拖放API之自定义拖放行为</title>
+        <style>
+            p{
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+                float: left;
+                margin: 10px;
+                text-align: center;
+            }
+            div#container{
+                border: 1px solid;
+                width: 340px;
+                height: 100px;
+                clear: both;
+                margin: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>HTML5拖放API之自定义拖放行为</h3>
+        <hr />
+        <p id="test1" draggable="true" ondragstart="drag1(event)">
+            拖曳效果<br>move
+        </p>
+        <p id="test2" draggable="true" ondragstart="drag2(event)">
+            拖曳效果<br>copy
+        </p>
+        <p id="test3" draggable="true" ondragstart="drag3(event)">
+            拖曳效果<br>link
+        </p>
+        <div id="container" ondragover="allowDrop(event)" ondrop="drop(event)">
+            可放置区域
+        </div>
+        <script>
+            //ondragstart事件回调函数
+            function drag1(ev){
+                var dataTrans = ev.dataTransfer;
+                dataTrans.effectAllowed = "move";
+                //设置传递内容为被拖曳元素的id名称，数据类型为纯文本类型
+                dataTrans.setData("text/plain", "ev.target.id");
+            }
+            function drag2(ev){
+                var dataTrans = ev.dataTransfer;
+                dataTrans.effectAllowed = "copy";
+                //设置传递的内容为被拖曳元素的id名称，数据类型为纯文本类型
+                dataTrans.setData("text/plain", ev.target.id);
+            }
+            function drag3(ev){
+                var dataTrans = ev.dataTransfer;
+                dataTrans.effectAllowed = "link";
+                //设置传递的内容为被拖曳元素的id名称，数据类型为纯文本类型
+                dataTrans.setData("text/plain", ev.target.id);
+            }
+
+            //ondragover事件回调函数
+            function allowDrop(ev){
+                //解禁当前元素为可放置被拖曳元素的区域
+                ev.preventDefault();
+            }
+        </script>
+    </body>
+</html>

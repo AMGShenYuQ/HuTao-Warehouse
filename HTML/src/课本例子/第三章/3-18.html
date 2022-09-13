@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS属性margin的应用</title>
+        <style>
+            .box{
+                border: 1px solid;
+                width: 300px;
+                margin: 10px;
+            }
+            .yellow{
+                background-color: yellow
+            }
+            .style01{
+                margin: 20px
+            }
+            .style02{
+                margin: 10px 50px
+            }
+            .style03{
+                margin-left: 100px
+            }
+        </style>
+    </head>
+    <body>
+        <h3>CSS熟悉感margin的应用</h3>
+        <hr />
+        <div class="box">
+            <div class="yellow">
+                该段落没有使用外边距，默认值为0
+            </div>
+        </div>
+        <div class="box">
+            <div class="style01 yellow">
+                该段落元素的各边外边距均为20像素
+            </div>
+        </div>
+        <div class="box">
+            <div class="style02 yellow">
+                该段落元素的上下边外边距均为10像素、左右边外边距均为50像素
+            </div>
+        </div>
+        <div class="box">
+            <div class="style03 yellow">
+                该段落元素左外边距为100像素
+            </div>
+        </div>
+    </body>
+</html>
