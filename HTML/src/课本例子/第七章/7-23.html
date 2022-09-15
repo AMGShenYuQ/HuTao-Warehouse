@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML5画布变形效果之矩阵变形</title>
+    </head>
+    <body>
+        <h3>HTML5画布变形效果之矩阵变形</h3>
+        <hr />
+        <canvas id="myCanvas"width="200" height="200" style="border: 1px solid"></canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.transform(1,1,0,1,0,0);
+            ctx.fillStyle = "orange";
+            ctx.fillRect(0,0,100,100);
+        </script>
+    </body>
+</html>
