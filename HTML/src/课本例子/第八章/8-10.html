@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>开团の小曲</title>
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>开团の小曲</h3>
+        <hr />
+        <video id="video01" src="../video/坤坤摇BGM-幻昼DJ完整版.mp4" width="800"></video>
+        <div>
+            <button id="toggleBtn" onclick="toggleVideo()">
+                播放
+            </button>
+            <button onclick="bigVideo()">
+                画面放大
+            </button>
+            <button onclick="smallVideo()">
+                画面缩小
+            </button>
+        </div>
+
+        <script>
+            var video01 = document.getElementById("video01");
+            var toggleBtn = document.getElementById("toggleBtn");
+            function toggleVideo() {
+                if (video01.paused) {
+                    video01.play();
+                    toggleBtn.innerHTML = "暂停";
+                }
+                else {
+                    video01.pause();
+                    toggleBtn.innerHTML = "播放";
+                }
+            }
+
+            function bigVideo() {
+                video01.width = "1200";
+            }
+
+            function smallVideo() {
+                video01.width = "600";
+            }
+        </script>
+    </body>
+</html>
