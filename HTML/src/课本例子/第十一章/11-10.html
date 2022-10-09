@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS3自定义字体效果的应用</title>
+        <style>
+            @font-face {
+                font-family: 'little';
+                src: url("../font/little.ttf") format('truetype');
+            }
+            div{
+                font-size: 80px;
+                width: 300px;
+                height: 200px;
+                border: 1px solid;
+                color: purple;
+                text-align: center;
+                padding: 10px;
+            }
+            .littleFont{font-family: 'little'}
+        </style>
+    </head>
+    <body>
+        <h3>自定义字体效果</h3>
+        <div class="littleFont">
+            Happy Birthday
+        </div>
+    </body>
+</html>

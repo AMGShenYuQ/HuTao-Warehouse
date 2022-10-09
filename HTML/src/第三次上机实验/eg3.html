@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>选购图书</title>
+        <style>
+            h3{text-align: center;}
+            div{
+                text-align: center;
+            }
+            .block{
+                display: inline-block;
+            }
+            form{text-align: center;}
+            #book{
+                width: 250px;
+                height: 200px;
+            }
+            #buy{
+                width: 250px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>选购图书</h3>
+        <form>
+            <div class="block">图书备选区<br>
+                <select multiple id="book">
+                    <option value="32">计算机网络(32元)</option>
+                    <option value="58">数据结构(58元)</option>
+                    <option value="45">java程序设计(45元)</option>
+                    <option value="49">Web前端开发技术(49元)</option>
+                    <option value="35">Web前端开发技术实验与实践(35元)</option>
+                    <option value="30">计算机组成原理(30元)</option>
+                    <option value="30">数据库开发技术(30元)</option>
+                </select>
+            </div>
+            <div class="block">图书采购区<br><select multiple id="buy"></select></div>
+        </form>
+        <div>
+            <button onclick="SingleBuy()">单一选购</button>
+            <button onclick="SingReturn()">单一退购</button>
+            <button onclick="clc()">清空</button>
+            <button onclick="checkout()">结账</button>
+        </div>
+        <script>
+            function SingleBuy() {
+                var x = document.getElementById("book");
+                var y = document.getElementById("buy");
+                if (x.selectedIndex != -1) {
+                    newoption = document.createElement("option");
+                    newoption.text = x.options[x.selectedIndex].text;
+                    newoption.value = x.options[x.selectedIndex].value;
+                    y.add(newoption);
+                }
+            }
+
+            function SingReturn(){
+                var y = document.getElementById("buy");
+                if (y.selectedIndex != -1) {
+                    newoption = document.createElement("option");
+                    newoption.text = y.options[y.selectedIndex].text;
+                    newoption.value = y.options[y.selectedIndex].value;
+                    y.remove(newoption);
+                }
+            }
+
+            function clc() {
+                var y = document.getElementById("buy");
+                if (y.options.length != 0){
+                    y.options.length = 0;
+                }
+            }
+
+            function checkout(){
+                var y = document.getElementById("buy");
+                var count = 0;
+                for (i = 0; i < y.options.length; i++){
+                    count += Number(y.options[i].value);
+                }
+                alert("请您付款" + count + "元，欢迎下次光临");
+            }
+        </script>
+    </body>
+</html>

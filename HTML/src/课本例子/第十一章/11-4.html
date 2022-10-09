@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS3自定义背景图片绘制区域</title>
+        <style>
+            div{
+                text-align: center;
+                border: 10px dashed #09F;
+                background-color: silver;
+                padding: 20px;
+                margin: 20px;
+                width: 200px;
+                height: 100px;
+            }
+            .borderBox{background-clip: border-box}
+            .paddingBox{background-clip: padding-box}
+            .contentBox{background-clip: content-box}
+        </style>
+    </head>
+    <body>
+        <h3>CSS3自定义背景图片绘制区域</h3>
+        <div class="borderBox">background-clip属性裁剪背景图片，包含border</div>
+        <div class="paddingBox">background-clip属性裁剪背景图片，包含padding</div>
+        <div class="contentBox">background-clip属性裁剪背景图片，包含content</div>
+    </body>
+</html>
