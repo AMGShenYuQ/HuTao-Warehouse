@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>图书馆调查问卷</title>
+    </head>
+    <style>
+        h1{
+            text-align: center;
+        }
+        hr{
+            background-color: pink;
+            height: 3px;
+        }
+        p{
+            text-indent: 2em;
+        }
+        textarea{
+            width: 20em;
+            height: 6em;
+            display: block;
+            margin: 10px;
+        }
+        div{
+            text-align: center;
+        }
+    </style>
+    <body>
+        <h1>图书馆读者调查问卷</h1>
+        <hr>
+        <p>为了能够及时了解您对图书馆的需求，提升我校图书馆文献资源建设的质量和水平，更好的为我校教学科研服务，我馆特设计了问卷调查题目如下，请协助填写，谢谢您的合作！</p>
+        <hr>
+        <form>
+            1.您的年级<br />请您选择：
+            <select>
+                <option value="none" selected disabled hidden>请你选择</option>
+                <option value="1">大一</option>
+                <option value="2">大二</option>
+                <option value="3">大三</option>
+                <option value="4">大四</option>
+            </select>
+            <hr>
+            2.您的专业<br />
+            <input type="text" name="specialized" size="50">
+            <hr>
+            3.对于图书馆的阅览环境<br />
+            <input type="radio" name="Satisfaction" value="satisfied" />满意<br />
+            <input type="radio" name="Satisfaction" value="BasicSatisfaction">基本满意<br />
+            <input type="radio" name="Satisfaction" value="dissatisfied">不满意 您的建议：<input type="text">
+            <hr>
+            4.您到图书馆的原因是（可多选）：<br />
+            <input type="checkbox" name="cause" value="1">借阅专业图书<br />
+            <input type="checkbox" name="cause" value="2">随便坐坐，翻翻书刊<br />
+            <input type="checkbox" name="cause" value="3">借阅光盘<br />
+            <input type="checkbox" name="cause" value="4">参加图书馆组织的活动<br />
+            <input type="checkbox" name="cause" value="5">自习，复习功课<br />
+            <input type="checkbox" name="cause" value="6">上网<br />
+            <input type="checkbox" name="cause" value="7">检索电子文献<br />
+            <hr>
+            5.您到图书馆的频率<br />
+            <input type="radio" name="frequency" value="1">几乎每天<br />
+            <input type="radio" name="frequency" value="2">每周1-2次<br />
+            <input type="radio" name="frequency" value="3">每月1-2次<br />
+            <input type="radio" name="frequency" value="4">几乎不去<br />
+            <hr>
+            6.您对学校的建议<br />
+            <textarea>请您提出宝贵建议：</textarea>
+            <hr>
+            7.请上传你的问卷细则：<br />
+            <input type="file" name="file01">
+            <hr>
+            <div>
+                <input type="submit" value="提交答案">
+                <input type="reset" value="清　空">
+            </div>
+        </form>
+    </body>
+</html>
