@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>原神玩家调查问卷</title>
+        <style>
+            h1{
+                text-align: center;
+            }
+            hr{
+                background-color: rebeccapurple;
+                height: 3px;
+            }
+            p{
+                text-indent: 2em;
+            }
+            form{
+                width: 400px;
+                margin: 20px;
+                text-align: left;
+            }
+            body{
+                border: rebeccapurple solid 5px;
+                text-align: center;
+            }
+            div{
+                text-align: center;
+            }
+            textarea{
+                width: 25em;
+                height: 8em;
+                display: block;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>原神玩家调查问卷</h1>
+        <hr>
+        <p>为了更好的了解玩家对本游戏各方面的满意情况，原神官方特意发向各位旅行者放此问卷调查满意度，填写完成后可获得114514个纠缠之源，希望各位旅行者认真填写，以及有任何问题都可以给我们反馈。</p>
+        <hr>
+        <form oninput="output1.innerHTML=range1.value, output2.innerHTML=range2.value">
+            <fieldset>
+                <legend>1.基本信息</legend>
+                <label>UID:
+                    <input type="text" name="UID" size="10" autofocus autocomplete="on" pattern="[0-9] {9}" title="请输入9位游戏UID" /><br>
+                </label>
+                <label>世界等级:
+                    <input type="number" name="grade" pattern="[0-9] {9}" title="请输入您的世界等级(0-9)" /><br>
+                </label>
+                <label>手机号:
+                    <input type="tel" name="tel" size="11" /><br>
+                </label>
+                <label>电子邮箱:
+                    <input type="email" name="email" size="30" /><br>
+                </label>
+                <label>历史祈愿记录:
+                    <input type="url" name="lottery" placeholder="请粘贴祈愿记录的url" /><br>
+                </label>
+                <label>何时开始游玩本游戏:
+                    <input type="date" name="datetime" min="2020-09-28" max="datetime-local" /><br>
+                </label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend>2.满意度调查</legend>
+                <label>您对当前的祈愿系统是否满意？(1-5分别代表:非常不满意、不满意、满意、比较满意、非常满意)
+                    <input type="range" name="range1" id="range1" min="1" max="5" step="1" value="1" /><br>
+                    <output name="output1" for="range1">1</output>
+                    <br>
+                </label>
+                <label>您对当前版本的剧情、活动及角色的是否满意?(1-5分别代表:非常不满意、不满意、满意、比较满意、非常满意)
+                    <input type="range" name="range2" id="range2" min="1" max="5" step="1" value="1" /><br>
+                    <output name="output2" for="range2">1</output>
+                    <br>
+                </label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend>3.您最喜欢的角色</legend>
+                <label>请选择:
+                    <input type="text" list="role" />
+                </label>
+                <datalist id="role">
+                    <option value="胡桃">火</option>
+                    <option value="可莉">火</option>
+                    <option value="夜兰">水</option>
+                    <option value="珊瑚宫心海">水</option>
+                    <option value="枫原万叶">风</option>
+                    <option value="魈">风</option>
+                    <option value="雷电将军">雷</option>
+                    <option value="刻晴">雷</option>
+                    <option value="纳西妲">草</option>
+                    <option value="艾尔海森">草</option>
+                    <option value="优菈">冰</option>
+                    <option value="神里绫华">冰</option>
+                    <option value="钟离">岩</option>
+                    <option value="荒泷一斗">岩</option>
+                </datalist>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend>4.意见反馈，希望我们改进的地方:</legend>
+                <label>
+                    <textarea>请您提出宝贵建议：</textarea>
+                </label>
+            </fieldset>
+            <div>
+                <input type="submit" value="提交" />
+            </div>
+        </form>
+    </body>
+</html>
