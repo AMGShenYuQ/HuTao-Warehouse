@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS3</title>
+        <style>
+            .div1{
+                width: 400px;
+                height: 400px;
+                text-align: center;
+                margin: 20px;
+                padding: 10px;
+                border: 3px red dashed;
+                box-shadow: 15px 15px 20px #AAA;
+                background-color: #888;
+            }
+            div.yszx{border-top-right-radius: 25px;border-bottom-left-radius: 30px}
+            .a1{
+                text-shadow: 0 0 5px green;
+            }
+            .a2{
+                text-shadow: 0 0 5px blue;
+            }
+            .a3{
+                text-shadow: 0 0 5px yellow;
+            }
+
+            .b{
+                font-weight: bold;
+                background-color: #CCCCCC;
+                color: #D1D1D1;
+            }
+            .b1{
+                text-shadow: -1px -1px white, 1px 1px #333;
+            }
+            .b2{
+                text-shadow: 1px 1px white, -1px -1px #444;
+            }
+
+            .c{
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                color: white;
+            }
+            .div2{
+                width: 60px;
+                height: 60px;
+                margin: 20px;
+                border: 1px solid;
+                padding: 20px;
+                display: inline-block;
+                text-align: center;
+            }
+            div.stylea{
+                transform: translate(20px,-20px);
+                -ms-transform: translate(20px,-20px);
+                -webkit-transform: translate(20px,-20px);
+            }
+            div.styleb{
+                transform: rotate(-50deg);
+                -ms-transform: rotate(-50deg);
+                -webkit-transform: rotate(-50deg);
+            }
+            div.stylec{
+                transform: scale(0.8,0.6);
+                -ms-transform: scale(0.8,0.6);
+                -webkit-transform: scale(0.8,0.6);
+            }
+            .div3{
+                width: 60px;
+                height: 60px;
+                background-color: green;
+                margin: 20px;
+                border: 1px solid;
+                padding: 20px;
+                text-align: center;
+                transition: background-color 6s ease-in-out 2s,width 6s,height 6s;
+                -webkit-transition: background-color 6s ease-in-out 2s,width 6s,height 6s;
+            }
+            div.div3:hover{
+                background-color: yellow;
+                width: 120px;
+                height: 120px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>CSS3应用</h3>
+        <hr>
+        <p>CSS3边框和背景效果</p>
+        <div class="div1 yszx" style="font-size: 1.7em">
+            1)	设置一个div，400px*400px，居中，外边距20px，内边距10px，边框宽3px，颜色为红色、虚线。<br>
+            为其设置圆角边框，圆角半径为右上角25px，左下角30px。<br>
+            为边框设置阴影，偏移x轴y轴均为15px，阴影宽度20px，颜色为#AAA。<br>
+            为此div设置背景色#888，绘制区域为内容区域。<br>
+        </div>
+        <hr>
+        <p>CSS3文本和字体效果</p>
+        <h3>文字发光效果</h3>
+        <div class="a1" style="font-size: 30px">
+            本文字内容仅用于测试
+        </div>
+        <div class="a2" style="font-size: 30px">
+            本文字内容仅用于测试
+        </div>
+        <div class="a3" style="font-size: 30px">
+            本文字内容仅用于测试
+        </div>
+        <hr>
+
+        <h3>凹凸纹理效果</h3>
+        <div class="b b1" style="font-size: 30px">
+            本文字内容仅用于测试
+        </div>
+        <div class="b b2" style="font-size: 30px">
+            本文字内容仅用于测试
+        </div>
+        <hr>
+
+        <h3>文字描边效果</h3>
+        <div class="c" style="font-size: 30px">
+            本文字内容仅用于测试
+        </div>
+        <hr>
+        <p>CSS3变形效果</p>
+        <div class="div2">参照系</div>
+        <div class="div2 stylea">右移20px，上移20px</div>
+        <hr>
+        <div class="div2">参照系</div>
+        <div class="div2 styleb">逆时针旋转50°</div>
+        <hr>
+        <div class="div2">参照系</div>
+        <div class="div2 stylec">宽缩放为原来的0.8倍，高缩放为原来的0.6倍</div>
+        <hr>
+        <p>CSS3动画效果</p>
+        <div class="div3"></div>
+    </body>
+</html>

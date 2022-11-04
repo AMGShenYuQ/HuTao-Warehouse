@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>视频播放页面</title>
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>使用素材art.mp4，制作一个视频播放页面</h3>
+        <hr>
+        <video id="video1" muted src="video/art.mp4#t=45" controls autoplay loop>对不起，您的浏览器不支持HTML5视频播放</video>
+        <div>
+            <button id="toggleBtn" onclick="toggleVideo()">播放</button>
+            <button onclick="bigVideo()">画面放大</button>
+            <button onclick="smallVideo()">画面缩小</button>
+            <button onclick="changeTime()">跳转到3:10</button>
+        </div>
+        <script>
+            var video1 = document.getElementById("video1");
+            var toggleBth = document.getElementById("toggleBtn");
+            function toggleVideo(){
+                if (video1.paused){
+                    video1.play();
+                    toggleBth.innerHTML = "暂停";
+                }
+                else {
+                    video1.pause();
+                    toggleBth.innerHTML = "播放";
+                }
+            }
+            function bigVideo(){
+                video1.width = "1000";
+            }
+            function smallVideo(){
+                video1.width = "400";
+            }
+            function changeTime(){
+                video1.currentTime = 190;
+                video1.play();
+            }
+        </script>
+    </body>
+</html>
